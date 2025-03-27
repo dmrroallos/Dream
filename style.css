@@ -44,9 +44,6 @@ body {
 .menu ul {
     display: flex;
     gap: 30px;
-}
-
-.menu ul li {
     list-style: none;
 }
 
@@ -61,6 +58,11 @@ body {
 .menu ul li a:hover {
     color: #ff7200;
 }
+
+ul li a i {
+    color: #ff7200;
+}
+
 
 /* Search Bar */
 .search {
@@ -182,3 +184,8 @@ body {
         font-size: 16px;
     }
 }
+
+
+
+
+
