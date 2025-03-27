@@ -8,6 +8,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* Background */
 .main {
     width: 100%;
     height: 100vh;
@@ -24,7 +25,7 @@ body {
     height: 75px;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Aligns logo left, menu center, search right */
+    justify-content: space-between;
     padding: 0 50px;
     background: rgba(0, 0, 0, 0.6);
     position: fixed;
@@ -41,10 +42,18 @@ body {
 }
 
 /* Menu */
+.menu {
+    position: relative;
+}
+
 .menu ul {
     display: flex;
     gap: 30px;
     list-style: none;
+}
+
+.menu ul li {
+    position: relative;
 }
 
 .menu ul li a {
@@ -53,15 +62,62 @@ body {
     font-size: 16px;
     font-weight: bold;
     transition: 0.3s ease-in-out;
+    padding: 10px;
+    display: block;
 }
 
 .menu ul li a:hover {
     color: #ff7200;
 }
 
-ul li a i {
+.menu ul li a i {
     color: #ff7200;
 }
+
+/* Submenu */
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ff7200;
+    width: 200px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.sub-menu ul {
+    display: inline-block; /* sub menu box design */
+    flex-direction: column; /* sub menu row */
+    list-style: none;
+    padding-bottom: 3px;
+}
+
+.sub-menu ul li {
+    width: 100%;
+}
+
+.sub-menu ul li a {
+    padding: 10px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sub-menu ul li a:hover {
+    color: black;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Show submenu on hover */
+.menu ul li:hover .sub-menu {
+    display: block;
+}
+
+
 
 
 /* Search Bar */
@@ -97,15 +153,16 @@ ul li a i {
     border: 1px solid #ff7200;
 }
 
+/* Content */
 .content {
     width: 100%;
-    max-width: 800px; /* Limits width for better readability */
-    text-align: center; /* Centers text */
+    max-width: 800px;
+    text-align: center;
     color: white;
-   position: absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centers the content */
+    transform: translate(-50%, -50%);
 }
 
 /* Headline */
@@ -124,7 +181,6 @@ ul li a i {
 
 /* Paragraph */
 .content .par {
-    font-family: Arial, sans-serif;
     font-size: 18px;
     line-height: 1.6;
     letter-spacing: 1px;
@@ -183,9 +239,29 @@ ul li a i {
         height: 40px;
         font-size: 16px;
     }
+
+    .menu ul {
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        display: none;
+    }
+
+    .menu ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu ul li:hover .sub-menu1 {
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+
+    .menu.active ul {
+        display: flex;
+    }
 }
-
-
-
-
-

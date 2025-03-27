@@ -6,7 +6,7 @@
     <title>Webpage Design</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+</head>
 <body>
     <div class="main">
         <!-- Navigation Bar -->
@@ -17,11 +17,52 @@
             <!-- Center: Navigation Menu -->
             <div class="menu">
                 <ul>
-                    <li><a href="#"><i class="fas fa-house"></i> HOME</a></li>
-                    <li><a href="#"><i class="fas fa-user"></i> ABOUT</a></li>
-                    <li><a href="#"><i class="fas fa-clone"></i> SERVICE</a></li>
-                    <li><a href="#"><i class="fas fa-edit"></i> DESIGN</a></li>
-                    <li><a href="#"><i class="fas fa-phone"></i> CONTACT</a></li>
+                    <li class="active"><a href="#"><i class="fas fa-house"></i> HOME</a></li>
+                    
+                    <li>
+                        <a href="#"><i class="fas fa-user"></i> ABOUT</a>
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="#">Mission</a></li>
+                                <li><a href="#">Vision</a></li>    
+                                <li><a href="#">Team</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <a href="#"><i class="fas fa-clone"></i> Location</a>
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="#">Olongapo</a></li>
+                                <li><a href="#">Subic</a></li>    
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <a href="#"><i class="fas fa-edit"></i> SERVICE</a>
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="#">Tailoring</a></li>
+                                <li><a href="#">Web Designing</a></li>    
+                                <li><a href="#">Data Analytics</a></li>
+                                <li><a href="#">Accounting/Auditing</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <a href="#"><i class="fas fa-phone"></i> CONTACT</a>
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="#">Maximo Roallos</a></li>
+                                <li><a href="#">Dave Mark Roallos</a></li>    
+                                <li><a href="#">Daryl Roallos</a></li>
+                                <li><a href="#">Diane Roallos</a></li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>                
             </div>
 
@@ -30,12 +71,11 @@
                 <input class="srch" type="search" name="search" placeholder="Type to Search">
                 <button class="btn">Search</button>
             </div>
-
         </div>
+
         <div class="content">
-            <h1>WebDesign, Data Analytic , Accounting , Tailoring  & <br><span>Development</span> <br>Course</h1>
+            <h1>WebDesign, Data Analytics, Accounting, Tailoring & <br><span>Development</span> <br>Course</h1>
             <p class="par">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-        
             <button class="cn"><a href="#">Join Us</a></button>
         </div>
     </div>
