@@ -3,9 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="max.css">
+  <title>Tailor Profile</title>
+
 </head>
+      
 <body>
-  
+  <div class="profile-container">
+      <img src="max-images/imo1.jpg" alt="Profile Picture" class="profile-img">
+      <div class="name">Maximo Roallos</div>
+    <div class="submenu1">
+      <div class="job-title">Tailor</div>
+      <div class="description">
+          Passionate Tailor with experience in Coat making, Pants, and Polo.
+      </div>
+       <!-- Skills Section -->
+    <div class="skills">
+      <span>Coat Making</span>
+      <span>Pants Tailoring</span>
+      <span>Polo Crafting</span>
+      <span>Fabric Alterations</span>
+  </div>
+  </div>
+
+  <div class="clothing-section">
+      <h2>Coats</h2>
+      <img src="max-images/ab36d9468da5805e148366703dd624c4.jpg" alt="Coat">
+      <img src="max-images/mercana2.jpg" alt="Coat">
+      <img src="max-images/mercana3.jpg" alt="Coat">
+      <img src="max-images/mercana4.jpg" alt="Coat">
+      <div class="submenu">
+          <button onclick="showDescription('classic')">Classic Coat</button>
+          <button onclick="showDescription('modern')">Modern Blazer</button>
+      </div>
+      <div id="classic" class="description-box">A timeless classic coat, perfect for formal occasions.</div>
+      <div id="modern" class="description-box">A stylish modern blazer for a contemporary look.</div>
+  </div>
+
+  <div class="clothing-section">
+      <h2>Pants</h2>
+      <img src="max-images/pants1.jpg" alt="Pants">
+      <img src="max-images/pants1.jpg" alt="Pants">
+      <img src="max-images/pants1.jpg" alt="Pants">
+      <img src="max-images/pants1.jpg" alt="Pants">
+      <div class="submenu">
+          <button onclick="showDescription('formal')">Formal Pants</button>
+          <button onclick="showDescription('casual')">Casual Trousers</button>
+      </div>
+      <div id="formal" class="description-box">Elegant formal pants for business and special occasions.</div>
+      <div id="casual" class="description-box">Comfortable casual trousers for everyday wear.</div>
+  </div>
+
+  <div class="clothing-section">
+      <h2>Polo</h2>
+      <img src="max-images/long1.jpg" alt="Polo Shirt">
+      <img src="max-images/long2.jpg" alt="Polo Shirt">
+      <img src="max-images/long3.jpg" alt="Polo Shirt">
+      <img src="max-images/long4.jpg" alt="Polo Shirt">
+      <div class="submenu">
+          <button onclick="showDescription('classic-polo')">Classic Polo</button>
+          <button onclick="showDescription('sporty-polo')">Sporty Polo</button>
+      </div>
+      <div id="classic-polo" class="description-box">A traditional polo shirt for a smart-casual look.</div>
+      <div id="sporty-polo" class="description-box">A sporty polo with moisture-wicking fabric.</div>
+  </div>
+
+  <script>
+      function showDescription(id) {
+          let descriptions = document.querySelectorAll('.description-box');
+          descriptions.forEach(desc => desc.style.display = 'none');
+          document.getElementById(id).style.display = 'block';
+      }
+  </script>
 </body>
 </html>
+
