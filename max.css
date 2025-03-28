@@ -86,6 +86,7 @@ body {
    text-align: center;
 }
 
+
 .image1 img {
    width: 100%;
    height: 300px;
@@ -100,9 +101,11 @@ body {
 }
 
 .job-title {
-   font-size: 18px;
-   color: #555;
+   font-size: 30px;
+   font-weight: bold;
+   color: rgb(7, 7, 7);
    margin-top: 5px;
+  
 }
 
 .description {

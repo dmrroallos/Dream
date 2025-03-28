@@ -3,28 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="max.css">
-  <title>Tailor Profile</title>
-
+  <link rel="stylesheet" href="tailoring.css">
+  <title>Tailoring</title>
+  <style>
+    .description-box {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+  </style>
 </head>
-      
 <body>
-  <div class="profile-container">
-      <img src="max-images/imo1.jpg" alt="Profile Picture" class="profile-img">
-      <div class="name">Maximo Roallos</div>
-    <div class="submenu1">
-      <div class="job-title">"Tailor"</div>
-      <div class="description">
-          Passionate Tailor with experience in Coat making, Pants, and Polo.
-      </div>
-       <!-- Skills Section -->
-    <div class="skills">
-      <span>Coat Making</span>
-      <span>Pants Tailoring</span>
-      <span>Polo Crafting</span>
-      <span>Fabric Alterations</span>
-  </div>
-  </div>
 
   <div class="clothing-section">
       <h2>Coats</h2>
@@ -69,12 +60,16 @@
   </div>
 
   <script>
-      function showDescription(id) {
-          let descriptions = document.querySelectorAll('.description-box');
-          descriptions.forEach(desc => desc.style.display = 'none');
-          document.getElementById(id).style.display = 'block';
-      }
+    function showDescription(id) {
+      // Hide all description boxes first
+      document.querySelectorAll('.description-box').forEach(box => {
+        box.style.display = 'none';
+      });
+
+      // Show the selected description
+      document.getElementById(id).style.display = 'block';
+    }
   </script>
+
 </body>
 </html>
-
