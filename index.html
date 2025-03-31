@@ -79,5 +79,27 @@
             <button class="cn"><a href="#">Join Us</a></button>
         </div>
     </div>
+
+    <!-- JavaScript should be placed here -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.createElement("div");
+            menuToggle.classList.add("menu-toggle");
+            menuToggle.innerHTML = "<i class='fas fa-bars'></i>";
+            document.querySelector(".navbar").prepend(menuToggle);
+        
+            const menu = document.querySelector(".menu");
+            menuToggle.addEventListener("click", function () {
+                menu.classList.toggle("active");
+            });
+        
+            // Close menu when clicking outside
+            document.addEventListener("click", function (event) {
+                if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+                    menu.classList.remove("active");
+                }
+            });
+        });
+    </script>
 </body>
 </html>

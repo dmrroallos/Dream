@@ -14,8 +14,8 @@ body {
   width: 100%;
   height: 100vh;
   overflow-x: hidden;
-  background: linear-gradient(to right, #f8f9fa, #e3e7eb);
-  color: #333;
+  background: linear-gradient(to right, #f8f9fa, #dee2e6);
+  color: #222;
 }
 
 /* Typography */
@@ -26,6 +26,7 @@ html {
 p {
   font-size: 1.8rem;
   line-height: 1.6;
+  color: #333;
 }
 
 /* Buttons */
@@ -39,8 +40,7 @@ p {
   box-shadow: 2px 4px 10px rgba(0, 123, 255, 0.3);
   transition: all 0.3s ease;
   display: inline-block;
-  padding-top: 10px;
-  margin-top: 10px;
+  margin-top: 2rem;
 }
 
 .btn:hover {
@@ -55,7 +55,7 @@ header {
   left: 0;
   width: 100%;
   padding: 1.5rem 9%;
-  background: white;
+  background: #ffffff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
@@ -66,7 +66,7 @@ header {
 /* Logo */
 .logo {
   font-size: 3rem;
-  color: #007bff;
+  color: #0056b3;
   font-weight: 800;
   cursor: pointer;
   transition: transform 0.5s ease;
@@ -77,16 +77,25 @@ header {
 }
 
 /* Navigation */
+.menu-toggle {
+  position: absolute;
+  right: 30px; /* Adjust as needed */
+  top: 30px; /* Adjust to align vertically */
+  font-size: 24px; /* Adjust size if needed */
+  cursor: pointer; /* Ensures it's clickable */
+}
+
 nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 6rem;
+  left: 75%;
 }
 
 nav a {
   font-size: 1.8rem;
-  color: #333;
+  color: #222;
   font-weight: 500;
   transition: 0.3s ease;
   border-bottom: 3px solid transparent;
@@ -149,12 +158,14 @@ section {
   font-size: 6rem;
   font-weight: 700;
   line-height: 1.3;
+  color: #222;
 }
 
 .home .home-content h3 {
   font-size: 3.8rem;
   margin-bottom: 1.5rem;
   font-weight: 600;
+  color: #444;
 }
 
 span {
@@ -198,6 +209,7 @@ span {
   border-radius: 50%;
   transition: all 0.3s ease;
   color: #007bff;
+  background-color: white;
 }
 
 .social-icons a:hover {
@@ -206,23 +218,78 @@ span {
   box-shadow: 2px 4px 10px rgba(0, 123, 255, 0.3);
 }
 
-/* Responsive Adjustments */
+/* Responsive Navbar */
 @media (max-width: 768px) {
-  .home {
-    flex-direction: column;
-    gap: 3rem;
+  nav {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: #333;
   }
-
-  .home-content h1 {
-    font-size: 4.5rem;
+  nav a {
+      padding: 10px;
+      text-align: center;
+      display: block;
+      color: white;
   }
-
-  .home-content h3 {
-    font-size: 3rem;
+  .menu-toggle {
+      display: block;
+      font-size: 24px;
+      cursor: pointer;
   }
+}
 
-  .home-img {
-    width: 200px;
-    height: 200px;
+/* Apply animations */
+.logo {
+  opacity: 0;
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+ nav a{
+  opacity: 0;
+  animation: slideInTop 0.2s ease-out 0.2s forwards;
+}
+
+.home-content {
+  position: relative;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp 1s ease-out forwards;
+}
+
+
+/* General animation settings */
+@keyframes slideInLeft {
+  from {
+      opacity: 0;
+      transform: translateX(-100px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes slideInTop {
+  from {
+      opacity: 0;
+      transform: translateY(-50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+@keyframes slideUp {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
   }
 }
