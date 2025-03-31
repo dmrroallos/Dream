@@ -94,10 +94,18 @@ body {
    border-radius: 10px;
 }
 
-.name {
-   font-size: 24px;
+.name  {
+   font-size: 35px;
    font-weight: bold;
    margin-top: 10px;
+   color:white;
+}
+
+.number {
+   font-size: 20px;
+   font-weight: bold;
+   margin-top: 10px;
+   color:white;
 }
 
 .job-title {
