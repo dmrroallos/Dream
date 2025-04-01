@@ -312,7 +312,7 @@ body {
 
 .navbar .menu ul {
     opacity: 0;
-    animation: slideInTop 0.2s ease-out 0.2s forwards;
+    animation: slideInTop 0.1s ease-out 0.1s forwards;
 }
 
 .content {
