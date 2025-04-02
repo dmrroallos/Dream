@@ -28,6 +28,17 @@ body {
     top: 0;
     left: 0;
     z-index: 1000;
+    animation: navbarAnimation 1s ease-out;
+}
+
+/* Animation for Navbar */
+@keyframes navbarAnimation {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 /* Clothing Section */
@@ -40,6 +51,7 @@ body {
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
     color: #ff7200;
+    animation: sectionFadeIn 1.5s ease-in-out;
 }
 
 .clothing-section h2 {
@@ -60,6 +72,22 @@ body {
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for images */
+.clothing-section img:hover {
+    transform: scale(1.05);
+}
+
+/* Fade-in effect for clothing section */
+@keyframes sectionFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 /* Submenu Section */
